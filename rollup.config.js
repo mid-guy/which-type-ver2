@@ -12,7 +12,7 @@ export default
     output: {
       file: `dist/index.js`,
       exports: "auto",
-      format: "esm",
+      format: "cjs",
       sourcemap: true,
     },
     plugins: [
