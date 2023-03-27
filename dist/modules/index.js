@@ -1,0 +1,2 @@
+function n(n){return Object.prototype.toString.call(n).slice(8,-1)}function t(t){return"Array"===n(t)}function r(t){return"Function"===n(t)}function u(t){return"Null"===n(t)}function e(t){return"Number"===n(t)}function c(t){return"Object"===n(t)}function o(t){return"String"===n(t)}export{n as is,t as isArray,r as isFunction,u as isNull,e as isNumber,c as isObject,o as isString};
+//# sourceMappingURL=index.js.map
