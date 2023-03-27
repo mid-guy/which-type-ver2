@@ -4,7 +4,7 @@
     "module": "esnext",
     "esModuleInterop": true,
     "declaration": true,
-    "declarationDir": "dist/modules",
+    "declarationDir": "dist",
     "outDir": "dist",
     "strict": true,
     "sourceMap": true

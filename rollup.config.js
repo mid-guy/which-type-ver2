@@ -10,7 +10,7 @@ export default
   {
     input: `modules/index.ts`,
     output: {
-      file: `dist/modules/index.js`,
+      file: `dist/index.js`,
       exports: "auto",
       format: "esm",
       sourcemap: true,
