@@ -1,0 +1,32 @@
+name: "release npm"
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Update package.json
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require('fs');
+            const packageJsonPath = './dist/package.json';
+            const releaseTag = process.env.GITHUB_REF.split('/').slice(2).join('/');
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath));
+            packageJson.version = releaseTag;
+            fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+      - name: node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org
+      - name: publish
+        run: npm publish --access public
+        working-directory: dist
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
