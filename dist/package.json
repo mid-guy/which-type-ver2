@@ -2,6 +2,7 @@
   "name": "which-type-ver2",
   "version": "2.0.0",
   "description": "check type of variable",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && rollup -c",
