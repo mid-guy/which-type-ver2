@@ -1,0 +1,4 @@
+{
+  "main": "dist/isObject/isObject.js",
+  "types": "dist/isObject/isObject.d.ts"
+}

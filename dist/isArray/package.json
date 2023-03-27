@@ -1,0 +1,4 @@
+{
+  "main": "dist/isArray/isArray.js",
+  "types": "dist/isArray/isArray.d.ts"
+}

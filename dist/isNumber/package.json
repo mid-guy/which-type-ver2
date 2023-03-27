@@ -1,0 +1,4 @@
+{
+  "main": "dist/isNumber/isNumber.js",
+  "types": "dist/isNumber/isNumber.d.ts"
+}

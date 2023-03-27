@@ -1,17 +1,8 @@
-import is from "./is/is";
-import isArray from "./isArray/isArray";
-import isFunction from "./isFunction/isFunction";
-import isNull from "./isNull/isNull";
-import isNumber from "./isNumber/isNumber";
-import isObject from "./isObject/isObject";
-import isString from "./isString/isString";
 
-export {
-  is,
-  isArray,
-  isFunction,
-  isNull,
-  isNumber,
-  isObject,
-  isString
-}
+export { default as is } from "./is/index"
+export { default as isArray } from "./isArray/index"
+export { default as isFunction } from "./isFunction/index"
+export { default as isNull } from "./isNull/index"
+export { default as isNumber } from "./isNumber/index"
+export { default as isObject } from "./isObject/index"
+export { default as isString } from "./isString/index"
