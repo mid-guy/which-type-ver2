@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationDir": "dist/modules",
+    "outDir": "dist",
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": ["modules/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
