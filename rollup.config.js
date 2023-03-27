@@ -14,38 +14,33 @@ const dir = [
   "isString",
   "isNull",
 ];
-const modulesConfig = dir.map((folder) => ({
-  input: `modules/${folder}/${folder}.ts`,
-  output: [
+const modulesConfig = dir.map((folder) => (
     {
-      file: `dist/${folder}/index.js`,
-      exports: "auto",
-      format: "esm",
-      sourcemap: true,
-    },
-    {
-      file: `dist/${folder}/${folder}.js`,
-      exports: "auto",
-      format: "esm",
-      sourcemap: true,
-    },
-  ],
-  plugins: [
-    nodeResolve(),
-    commonjs(),
-    typescript({
-      tsconfig: "tsconfig.json",
-      useTsconfigDeclarationDir: true,
-    }),
-    generatePackageJson({
-      baseContents: (pkg) => ({
-        main: `dist/${folder}/${folder}.js`,
-        types: `dist/${folder}/${folder}.d.ts`,
-      }),
-    }),
-    babel(),
-    terser(),
-  ],
+      input: `modules/${folder}/${folder}.ts`,
+      output: [
+        {
+          file: `dist/${folder}/${folder}.js`,
+          exports: "auto",
+          format: "esm",
+          sourcemap: true,
+        },
+      ],
+      plugins: [
+        nodeResolve(),
+        commonjs(),
+        typescript({
+          tsconfig: "tsconfig.json",
+          useTsconfigDeclarationDir: true,
+        }),
+        // generatePackageJson({
+        //   baseContents: (pkg) => ({
+        //     main: `dist/${folder}/${folder}.js`,
+        //     types: `dist/${folder}/${folder}.d.ts`,
+        //   }),
+        // }),
+        babel(),
+        terser(),
+      ],
 }));
 export default [
   ...modulesConfig,

@@ -1,0 +1,1 @@
+{"version":3,"file":"is.js","sources":["../../modules/is/is.ts"],"sourcesContent":["export default function is<T>(value: T) {\n  return Object.prototype.toString.call(value).slice(8, -1)\n}"],"names":["is","value","Object","prototype","toString","call","slice"],"mappings":"AAAwB,SAAAA,EAAMC,GAC5B,OAAOC,OAAOC,UAAUC,SAASC,KAAKJ,GAAOK,MAAM,GAAI,EACzD"}
