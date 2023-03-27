@@ -1,4 +1,0 @@
-{
-  "main": "dist/isNull/isNull.js",
-  "types": "dist/isNull/isNull.d.ts"
-}

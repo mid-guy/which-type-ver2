@@ -1,2 +1,0 @@
-"use strict";function t(t){return Object.prototype.toString.call(t).slice(8,-1)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.is=t,exports.isArray=function(r){return"Array"===t(r)},exports.isFunction=function(r){return"Function"===t(r)},exports.isNull=function(r){return"Null"===t(r)},exports.isNumber=function(r){return"Number"===t(r)},exports.isObject=function(r){return"Object"===t(r)},exports.isString=function(r){return"String"===t(r)};
-//# sourceMappingURL=index.js.map

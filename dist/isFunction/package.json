@@ -1,4 +1,0 @@
-{
-  "main": "dist/isFunction/isFunction.js",
-  "types": "dist/isFunction/isFunction.d.ts"
-}

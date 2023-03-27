@@ -18,9 +18,15 @@ const modulesConfig = dir.map((folder) => ({
   input: `modules/${folder}/${folder}.ts`,
   output: [
     {
+      file: `dist/${folder}/index.js`,
+      exports: "auto",
+      format: "esm",
+      sourcemap: true,
+    },
+    {
       file: `dist/${folder}/${folder}.js`,
       exports: "auto",
-      format: "cjs",
+      format: "esm",
       sourcemap: true,
     },
   ],
@@ -48,7 +54,7 @@ export default [
     output: {
       file: `dist/index.js`,
       exports: "auto",
-      format: "cjs",
+      format: "esm",
       sourcemap: true,
     },
     plugins: [

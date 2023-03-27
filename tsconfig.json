@@ -7,6 +7,7 @@
     "declarationDir": "dist",
     "outDir": "dist",
     "strict": true,
+    "moduleResolution": "node",
     "sourceMap": true
   },
   "include": ["modules/**/*.ts"],
